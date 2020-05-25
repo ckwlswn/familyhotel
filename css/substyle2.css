@@ -1,0 +1,353 @@
+* { margin: 0; padding: 0; box-sizing: border-box;}
+ul { list-style-type: none;}
+a { text-decoration: none;}
+
+body {
+    font-family: 'Noto Sans', sans-serif;
+}
+#header-container-full{
+    background-color: #dfe2c1;
+}
+#main_header {
+    width: 1200px; height: 95px;
+    /* outline: 1px solid red; */
+    margin: 0 auto;
+    position: relative;
+    /* overflow: hidden; */
+}
+#main_gnb { font-size: 18px;}
+
+
+.top_gnb {
+    float: right;
+}
+.top_gnb li { 
+    display: inline-block;
+    padding-right: 15px;
+    font-size: 12px;
+    margin-top: 10px;
+}
+.top_gnb li:last-child {
+    padding-right: 0;
+}
+.top_gnb li a { color: #000;}
+
+.left_gnb {
+    float: left;
+    margin-top: 48px;
+    margin-left: 0px;
+    
+}
+.left_gnb li { 
+    display: inline-block;
+    font-size: 18px;
+    margin-right: 50px;
+    text-align: center;
+}
+.left_gnb li:last-child { margin-right: 0;}
+
+.left_gnb li a {
+     color: #000;
+     /* font-weight: bold; */
+    }
+.left_gnb li a:hover { 
+    text-decoration: underline;}
+.fa-calendar {
+    color: #333333;  
+}
+.fa-search {
+    color: #333333;
+}
+/* 로고이미지 */
+#main_header > #main_gnb >  h1 {
+    position: absolute;
+    left: 540px;
+    top: 5px;
+}
+#main_header > #main_gnb >  h1 img {
+    width: 150px;
+    height: 90px;
+}
+
+/* 오른쪽 */
+.right_gnb {
+    position: absolute;
+    right: 0px; top: 48px;
+    text-align: center;
+}
+
+ /* 1단계 메뉴 */
+ .right_gnb > li {
+    float: left;
+    /* width: 180px; */
+    /* padding-right: 50px; */
+    /* outline: 1px solid red; */
+}
+.right_gnb li:last-child {
+    padding-right: 0;
+}
+
+/* hover 시 2단계 표시 */
+.right_gnb > li:hover > .depth2 {
+    display: block;
+    /* slide, fade */
+    height: 170px;
+    opacity: 1;
+}
+.right_gnb li a { 
+    display: block;
+    color: #000;
+    line-height: 25px;
+    /* font-weight: bold; */
+}
+  /* 2단계 메뉴 */
+  .right_gnb .depth2 {
+    /* border: 1px solid blue; */
+    margin-top: 20px;
+    /* display: none; */
+    height: 0;
+    background: #328172;
+    width: 180px;
+    overflow: hidden;
+    /* slide, fade */
+    transition: 0.4s;
+    opacity: 0;
+    font-size: 16px;
+}
+
+/* 메뉴 선택 효과 */
+.right_gnb a:hover { text-decoration: underline;}
+.right_gnb .depth2 li {
+    margin-top: 15px;
+    margin-bottom: 10px;
+}
+.right_gnb .depth2 > li a { 
+    color: #fff;
+    font-weight: normal;
+    font-size: 14px;
+}
+
+#sub {
+    width: 1200px;
+    margin: 0 auto;
+    position: relative;
+    /* outline: 1px solid blue; */
+    margin-bottom: 120px;
+}
+/* left */
+#left {
+    margin: 0 auto;
+    width: 1200px;
+    height: 327px;
+    /* outline: 1px solid red; */
+    margin-top: 65px;
+    position: relative;
+}
+#left #side_menu {
+    width: 265px;
+    height: 360px;
+    background-color: #f5f2ec;
+    /* outline: 1px solid red; */
+    padding-top: 35px;
+    padding-left: 20px;
+    color: #3b2e25;
+    
+}
+#side_menu h2 {
+    font-size: 24px;
+    padding-bottom: 20px;
+    font-weight: normal;
+}
+#side_menu hr {
+    margin-bottom: 20px;
+}
+#side_menu ul li {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+#side_menu ul li a {
+    color: #3b2e25;
+    font-size: 18px;
+}
+#side_menu ul li:hover  {
+    background-color: #dfe2c1;
+    width: 225px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+/* right */
+#right {
+    /* outline: 1px solid green; */
+    margin-top: -326px;
+    margin-left: 335px;
+    width: 865px;
+    /* background-color: grey; */
+}
+#right h2 {
+    width: 865px;
+    height: 50px;
+    /* background-color: #f5f2ec; */
+    color: #3b2e25;
+    line-height: 50px; 
+    font-weight: normal;
+
+}
+#right #room_img {
+    overflow: hidden;
+}
+#right #main-img {
+    width: 865px;
+    height: 375px;
+    margin-top: 15px;
+}
+
+#right .small {
+    display: block;
+    float: left;
+    width: 288px;
+    height: 95px;
+    box-sizing: border-box;
+    position: relative;
+    top: -5px;
+    outline: 1px solid #dfe2c1;
+    border: 4px solid #dfe2c1;
+}
+#right .small:hover {
+    border: 6px solid #328172;
+}
+#room_info {
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+#room_info p {
+    font-size: 18px;
+    color: #328172;
+    font-weight: bold;
+    padding-bottom: 15px;
+    /* outline: 1px solid red; */
+}
+#room_info span {
+    font-size: 13px;
+    color: #444;
+}
+#room_condition p {
+    font-size: 14px;
+    font-weight: bold;
+    padding-bottom: 20px;
+    color: #444;
+}
+#room_condition span {
+    padding-left: 15px;
+    font-weight: normal;
+    line-height: 20px;
+}
+#hotel_info {
+    width: 325px;
+    height: 400px;
+    background-color: #f5f2ec;
+    /* outline: 1px solid blue; */
+    position: absolute;
+    right: 0; top: 583px;
+    padding-left: 20px;
+}
+#hotel_info h2 {
+    font-size: 15px;
+}
+#hotel_info ul li{
+    font-size: 12px;
+    color: #444;
+    font-weight: bold;
+    padding-bottom: 20px;
+}
+#hotel_info ul li p {
+    font-weight: normal;
+    padding-top: 10px;
+    padding-left: 10px;
+}
+
+/* 푸터 */
+#sub_footer {
+    margin-top: 400px;  
+}
+#sub2_footer {
+    margin-top: 200px;  
+}
+.t-container {
+    width: 100%; height: 170px;
+    background: #dfe2c1;
+}
+.t-container > .t-footer {
+    width: 1200px; height: 170px;
+    background: #dfe2c1;
+    margin: 0 auto;
+    /* outline: 1px solid red; */
+}
+.t-footer img {
+    margin-top: 30px;
+    float: left;
+}
+.t-footer ul li {
+    /* width: 150px; */
+    padding-left: 25px;
+    padding-right: 25px;
+    display: inline-block;
+    line-height: 170px;
+    text-align: center;
+    margin-left: 25px;
+    
+}
+.t-footer ul li a {
+    color: #666;
+    font-size: 16px;
+}
+.t-footer ul li a:hover { text-decoration: underline;}
+.t-footer ul i {
+    /* width: 30px; */
+    /* outline: 1px solid red; */
+    margin-left: 30px;
+    text-align: center;
+    position: relative;
+    left: 10px;
+    /* color: #666; */
+}
+.t-footer ul i:hover {
+    transition: 0.2s;
+    transform: scale(1.2);  
+}
+
+/* 하단푸터 */
+.b-footer {
+    width: 1200px;
+    margin: 0 auto;
+}
+.b-footer li {
+    margin-top: 20px;
+    display: inline-block;
+    /* width: 120px; */
+    padding-right: 30px;
+    /* outline: 1px solid red; */
+    text-align: center;
+}
+.b-footer li a {
+    color: rgb(185, 185, 185);
+    font-size: 14px;
+}
+.b-footer li:first-child a {
+   color: #328172;
+}
+.b-footer > .footer-line {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    width: 1200px; height: 1px;
+    background: #dfe2c1;
+}
+.b-footer > .copy {
+    margin-bottom: 20px;
+}
+.b-footer > .copy p {
+    font-size: 12px;
+    color: #555;
+}
+.b-footer > .copy p span {
+    padding-left: 15px;
+}

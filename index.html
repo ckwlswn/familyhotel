@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>강남패밀리호텔</title>
+    <link rel="stylesheet" href="css/style.css">
+    <!-- 웹폰트 -->
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <!-- 제이쿼리 -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="./js/main.js"></script>
+    <!-- 달력 CSS -->
+    <link rel="stylesheet" href="cal/css/datepicker.css">
+     <!-- 폰트어썸 -->
+     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <div id="header-container-full">
+        <section id="main_header">
+            <nav id="main_gnb">
+            <ul class="top_gnb">
+                <li><a href="#">Sign in</a></li>
+                <li><a href="#">Site map</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="#">English</a></li>
+                <li><a href="#">Japanese</a></li>
+            </ul>
+            <ul class="left_gnb">
+                <li><a href="#">Reservation&nbsp;<i class="fa fa-calendar"></i></a></li>
+                <li><a href="room1.html">Accommodation&nbsp;<i class="fa fa-search"></i> </a></li>
+            </ul>
+    
+            <h1><a href="#"><img src="./images/logo.jpg" alt="logo"></a></h1>
+    
+            <ul class="right_gnb">
+                <li><a href="#">Event & PKG</a>
+                <ul class="depth2">
+                    <li><a href="#">공지사항 & 이벤트</a></li>
+                    <li><a href="#">패키지 & 프로모션</a></li>
+                </ul>
+                </li>
+                <li><a href="./room1.html">Hotel Information</a>
+                <ul class="depth2">
+                    <li><a href="sub.html">호텔소개</a></li>
+                    <li><a href="#">부대시설</a></li>
+                    <li><a href="location.html">찾아오시는 길</a></li>
+                    <li><a href="#">채용정보</a></li>
+                </ul>
+                </li>
+            </ul>
+            </nav>
+        </section>
+        </div>
+   
+    <!-- 비주얼 -->
+    <section id="visual">
+        <div class="slider">
+            <div class="sliders">
+                <img src="./images/visual.jpg" alt="1">
+                <img src="./images/visual2.jpg" alt="2">
+                <img src="./images/visual3.jpg" alt="3">
+                <img src="./images/visual4.jpg" alt="4">
+                <img src="./images/visual5.jpg" alt="5">
+                <img src="./images/visual6.jpg" alt="6">
+            </div>
+        </div>
+    </section>
+    <!-- 예약 -->
+    <section id="book">
+        
+        <div class="mydate c-datepicker-date-editor  J-datepicker-range-day mt10">
+        <input id="date" placeholder="체크인" name="" class="c-datepicker-data-input only-date" value="">
+        <span class="c-datepicker-range-separator">-</span>
+        <input id="date" placeholder="체크아웃" name="" class="c-datepicker-data-input only-date" value="">
+      </div>
+      
+      <!-- 인원 선택 -->
+    <div class="people">
+        <dl>
+            <dt>객실</dt>
+            <dd><a href="#">1</a></dd>
+        </dl>
+        <dl>
+            <dt>성인</dt>
+            <dd><a href="#">2</a></dd>
+        </dl>
+        <dl>
+            <dt>어린이 <a href="#">ⓘ</a></dt>
+            <dd><a href="#">0</a></dd>
+        </dl>
+        <dl>
+            <dt>유아 <a href="#">ⓘ</a></dt>
+            <dd><a href="#">0</a></dd>
+        </dl>
+    </div>
+        <div class="btn"><a href="#">예약</a></div>
+    </section>
+
+    <section id="offer">
+        <h2>스페셜 오퍼</h2>
+        <div class="line"></div>
+        <p>SPECIAL OFFERS</p>
+            <ul>
+                <li class="offer1"><a href="#"><img src="./images/offer1.jpg" alt="1">
+                        <div class="info">
+                            <h4>강남패밀리 호텔 비즈니스 고객을 위한 특별패키지</h4>
+                            <p>2020.05.01 ~ 2020.12.31 </p>
+                        </div>
+                    </a></li>
+                <li class="offer2"><a href="#"><img src="./images/offer2.jpg" alt="2">
+                        <div class="info">
+                            <h4>Double</h4>
+                            <p>비즈니스 고객 및 연인에게<br> 가장 사랑 받는 더블 객실입니다.</p>
+                        </div>
+                    </a></li>
+                <li class="offer3"><a href="#"><img src="./images/offer3.jpg" alt="3">
+                        <div class="info">
+                            <h4>Triple</h4>
+                            <p>비즈니스 고객을 <br> 위한 3인 전용 객실입니다.</p>
+                        </div>
+                    </a></li>
+                <li class="offer4"><a href="#"><img src="./images/offer4.JPG" alt="4"></a></li>
+            </ul>
+    </section>
+
+    <section id="guide">
+        <div class="header">
+            <h2>안내</h2>
+            <div class="line"></div>
+            <p>GUIDE</p>
+        </div>
+        <div class="content">
+            <div class="box1">
+                <h4>Accommodation</h4>
+                <p>비지니스 고객에게 추천하는 <br> 최적의 공간입니다.</p>
+                <a href="#"><img src="./images/acco.jpg" alt="1"></a>
+            </div>
+            <div class="box2">
+                <h4>Parking</h4>
+                <p>주차는 베스트웨스턴 프리미어강남호텔의 <br> 주차장을 이용해 주시기 바랍니다.</p>
+               <a href="#"><img src="./images/guide.jpg" alt="2"></a>
+            </div>
+            <div class="box3">
+                <h4>Contact</h4>
+                <p>항상 신속하고 친절한 답변을 <br> 약속 드리겠습니다.</p>
+              <a href="#"><img src="./images/contact.jpg" alt="3"></a>
+            </div>
+        </div>
+    </section>
+
+    <section id="info">
+       <ul class="info-box">
+        <li><a href="#"><img src="./images/reser.png" alt="icon1">
+            <h6>Reservation</h6>
+            <p>예약</p>
+        </a></li>
+        <li><a href="#"><img src="./images/ser.png" alt="icon2">
+            <h6>Service</h6>
+            <p>서비스</p>
+        </a></li>
+        <li><a href="#"><img src="./images/noti.png" alt="icon3">
+            <h6>Notice & Event</h6>
+            <p>공지사항 & 이벤트</p>
+        </a></li>
+        <li><a href="#"><img src="./images/cus.png" alt="icon4">
+            <h6>Customer</h6>
+            <p>문의하기</p>
+        </a></li>
+        <li><a href="#"><img src="./images/review.png" alt="icon5">
+            <h6>Review</h6>
+            <p>리뷰보기</p>
+        </a></li>
+       </ul>
+    </section>
+
+    <!-- 푸터 -->
+    <section id="sub_footer">
+        <div class="t-container">
+            <div class="t-footer">
+                <img src="./images/logo.jpg" alt="logo">
+            <ul>
+                <li><a href="#">Reservation</a></li>
+                <li><a href="./room1.html">Accommodation</a></li>
+                <li><a href="#">Event&PKG</a></li>
+                <li><a href="./sub.html">Hotel Information</a></li>
+                <li><a href="#">Contact</a></li>
+                <i class="fa fa-facebook"></i>
+                <i class="fa fa-instagram"></i>
+                <i class="fa fa-twitter"></i>
+            </ul>
+            </div>
+        </div>
+        <div class="b-footer">
+            <ul>
+                <li><a href="#">개인정보 처리방침</a></li>
+                <li><a href="#">채용안내</a></li>
+                <li><a href="location.html">찾아오시는 길</a></li>
+                <li><a href="#">공지 & 이벤트</a></li>
+                <li><a href="#">사이트 이용약관</a></li>
+                <li><a href="#">사이트맵</a></li>
+            </ul>
+            <div class="footer-line"></div>
+            <div class="copy">
+                <p>서울특별시 강남구 봉은사로 143 강남 패밀리 호텔(우:06122) <span> TEL 82-2-6474-1515 </span>
+                <span>FAX 82-1-2-6004-3624</span>
+                </p>
+                <p>Copyright 2016 GANGNAM FAMILY HOTEL. All Rights Reserved.</p>
+             </div>
+        </div>
+    </section>
+     <!-- 달력 라이브러리(하단에 추가) -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.26.0/moment.min.js"></script>
+  <script src="./cal/js/datepicker.all.min.js"></script>
+  <script src="./cal/js/datepicker.all.js"></script>
+  <script src="./cal/js/datapicker-separate/datepicker-only-time.js"></script>
+  <!-- 언어설정(한글) -->
+  <script src="./cal/js/datepicker.ko.js"></script>
+</body>
+
+</html>
