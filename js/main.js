@@ -36,4 +36,26 @@ $(function(){
       language: 'ko'  // 언어설정
     });
   })
+
+
+
+
+   // 예약
+   $('#book .people dl dd').click(function(){
+    $('#popup_menu').toggle();
+});
+
+  // 팝업창 닫기 버튼 
+  $('#btn_close').click(function(){
+      $('#popup_menu').toggle();
+  });
+
+  // 숫자버튼
+  // var count = 1;
+  // $('#popup_menu ul > button').on('click', function(){
+    
+  //               $('#popup_menu ul li').html(count);
+  //               count++;
+  //           });
+
 });
