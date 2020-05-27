@@ -233,6 +233,11 @@ body {
 }
 #date::placeholder { color: #999;}
 
+/* 달력 위로 올리기 */
+.c-datepicker-picker {
+    transform: translateY(-480px);
+}
+
 /* 팝업 */
 #popup_menu {
     position: absolute;
