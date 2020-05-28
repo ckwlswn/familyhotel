@@ -205,7 +205,6 @@ body {
     font-weight: bold;
     color: #328172;
     padding-bottom: 30px;
-    margin-top: 30px;
 }
 #right .intro1 span {
     border-left: 3px solid #dfe2c1;
@@ -258,7 +257,7 @@ body {
 }
 /* 푸터 */
 #sub_footer {
-    margin-top: -150px;
+    margin-top: 0;
 }
 #sub2_footer {
     margin-top: 200px;  
