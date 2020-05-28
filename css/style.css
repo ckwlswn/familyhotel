@@ -79,9 +79,6 @@ body {
  /* 1단계 메뉴 */
  .right_gnb > li {
     float: left;
-    /* width: 180px; */
-    /* padding-right: 50px; */
-    /* outline: 1px solid red; */
 }
 .right_gnb li:last-child {
     padding-right: 0;
@@ -113,6 +110,8 @@ body {
     transition: 0.4s;
     opacity: 0;
     font-size: 16px;
+    z-index: 99999999999999999999999;
+    position: relative;
 }
 
 /* 메뉴 선택 효과 */
@@ -129,15 +128,14 @@ body {
 
 /* 비주얼 */
 #visual { 
-    width: 1920px;
-    margin: 0 auto;
+    width: 100%;
     height: 650px;
-    /* background: #ccc; */
+    background: #ccc;
+    position: relative;
 
      /* 애니메이션 효과 */
     animation: visual 2s linear  normal;
 }
-
 
 @keyframes visual {
     from {
@@ -152,26 +150,28 @@ body {
     }
 }
 #visual img {
-    width: 1920px; height: 650px;
+    width:1920px; height: 650px;
+    
+   
 }
 .slider {
     width: 1920px; height: 650px;
     /* outline: 1px solid red; */
     /* 다른 사진 안보이게 */
     overflow: hidden;   
+    position: absolute;
+    left: calc(50% - 960px);
+    
 }
 .slider > .sliders {
     /* image roll width = slider view width(960) x (이미지 개수) */
     width: calc(1920px * 7);
     height: 650px;
-    /* outline: 2px solid blue; */
-
     /* 화면이동 calc(-이미지폭 x 이미지 번호 +1)*/
     margin-left: calc(-1920px * 0);
 
     /* 모션 - 재생시간 (넘어가는 재생시간임. 대기시간 X)*/
     transition-duration: 0.5s;
-
 }
 
 
@@ -232,6 +232,70 @@ body {
     
 }
 #date::placeholder { color: #999;}
+
+/* 달력 위로 올리기 */
+.c-datepicker-picker {
+    transform: translateY(-480px);
+}
+
+/* 팝업 */
+#popup_menu {
+    position: absolute;
+    left: 350px; top: 270px;
+    padding: 40px;
+    width: 1200px; height: 380px;
+    background: #fff;
+    display: none;
+    border-bottom: 1px solid #ccc;
+    z-index: 99999;
+}
+#popup_menu ul { margin-bottom: 10px;}
+#popup_menu ul li strong {
+    font-size: 16px;
+    color: #444;
+    font-weight: bold;
+    margin-left: 20px;
+    margin-right: 0px;
+    /* outline: 1px solid red; */
+}
+#popup_menu ul li {
+    display: inline;
+    /* outline: 1px solid red; */
+    padding-left: 50px;
+    padding-right: 50px;
+}
+#popup_menu ul li:nth-child(4n) {
+   /* outline: 1px solid red; */
+   padding: 20px;
+ 
+}
+#popup_menu ul input {
+    padding-right: 10px;
+    padding-left: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    background: #fff;
+    border: 1px solid #ccc;
+}
+#popup_menu .dot {border-top: 1px dotted #ccc; margin-bottom: 30px;}
+#popup_menu p {
+    font-size: 12px;
+    margin-bottom: 5px;
+    color: #666;
+}
+#popup_menu > #btn_close {
+    width: 150px; height: 40px;
+    margin-left: 500px;
+    margin-top: 5px;
+    border: none;
+    background:#dfe2c1;
+    font-weight: bold;
+    color: #575757;
+}
+#popup_menu > #btn_close:hover {
+background: #c9ccae;
+color: #fff;
+}
 /* 버튼 */
 #book > .btn {
     width: 135px; height: 60px;
@@ -252,6 +316,13 @@ body {
 }
 #book > .btn:hover > a { color: #999;}
 
+#toggle {
+    background: none;
+    border: none;
+    /* 손가락 생김 */
+    cursor: pointer;
+    color: #999;
+}
 
 /* 오퍼 */
 #offer {
