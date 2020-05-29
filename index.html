@@ -10,9 +10,11 @@
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
     <!-- 제이쿼리 -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- main.js -->
     <script src="./js/main.js"></script>
     <!-- 달력 CSS -->
     <link rel="stylesheet" href="cal/css/datepicker.css">
+    
      <!-- 폰트어썸 -->
      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
@@ -57,15 +59,18 @@
    
     <!-- 비주얼 -->
     <section id="visual">
-        <div class="slider">
-            <div class="sliders">
-                <img src="./images/visual.jpg" alt="1">
-                <img src="./images/visual2.jpg" alt="2">
-                <img src="./images/visual3.jpg" alt="3">
-                <img src="./images/visual4.jpg" alt="4">
-                <img src="./images/visual5.jpg" alt="5">
-                <img src="./images/visual6.jpg" alt="6">
+        <div class="img">
+                <img src="./images/visual.jpg" alt="visual">
+                <img src="./images/visual4.jpg" alt="visual">
+                <img src="./images/visual6.jpg" alt="visual">
             </div>
+
+            <div class="container-full">
+                <div id="visual_pager">
+                  <a class="selected" href="#" onclick="visual_change(1);">도심 속에 또 다른 내집</a>
+                  <a href="#" onclick="visual_change(3);">Home away from Home</a>
+                  <a href="#"  onclick="visual_change(2);">비즈니스 숙박업체</a>
+                </div>
         </div>
         <!-- 비주얼 안에 팝업넣고 z-index -->
         <div id="popup_menu">

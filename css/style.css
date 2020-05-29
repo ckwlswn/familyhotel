@@ -130,30 +130,57 @@ body {
 #visual { 
     width: 100%;
     height: 650px;
-    background: #ccc;
+    /* background: #ccc; */
     position: relative;
-
-     /* 애니메이션 효과 */
-    animation: visual 2s linear  normal;
+    overflow: hidden;
+    
 }
 
-@keyframes visual {
-    from {
-        opacity: 0;
-    }
-    50% {
-        opacity: 0.5;
-        
-    }
-    to {
-        opacity: 1;
-    }
-}
 #visual img {
     width:1920px; height: 650px;
-    
-   
+    position: absolute;
+    left: 0; top: 0;
+    /* margin: 0 auto; */
+    left: 50%;
+    margin-left: -960px;
+
 }
+
+#visual_pager {
+    width: 1200px;
+    /* outline: 2px solid red; */
+    overflow: hidden;
+    background: #205047;
+    position: absolute;
+    bottom: 0;
+   /* 중앙 정렬 */
+    left: 50%;
+    margin-left: -600px;
+   
+  }
+  #visual_pager > a {
+    display: block;
+    float: left;
+    width: 33.33%;
+    text-align: center;
+    height: 55px;
+    line-height: 55px;
+    color: #fff;
+  }
+  
+  /* 비주얼 버튼 배경색 상태 */
+  
+  #visual_pager > a.selected {
+    background: #6b918a;
+  }
+  #visual_pager > a:hover {
+    background: #dfe2c1;
+  }
+  
+  #visual .container-full {
+    background: #0b223c;
+  }
+  
 .slider {
     width: 1920px; height: 650px;
     /* outline: 1px solid red; */

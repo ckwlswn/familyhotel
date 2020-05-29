@@ -1,34 +1,52 @@
 // main.js
 // 이미지 슬라이더
-$(function(){
+// 전역변수로 해줘야함..(함수밖에다 설정)
+function visual_change(num) {
+  // alert(num);
 
-    // 전역변수(초기값)
-   var img_num = 0; // 이미지 번호
-   var img_width = 1920; // 이미지 폭
-   
-   // 슬라이더 이미지 변경 함수
-   function change_slider (num) {
-       img_num = num; // 이미지 번호
-       img_width = 1920; // 이미지 폭
-       $('.slider > .sliders')
-       .css('margin-left', -(img_width * img_num) + 'px');
-       
-   }
+  // 비주얼 이미지 모두 비표시 먼저해줌
+  $('.img img').css('display', 'none');
 
-   // 자동재생, 재생시간 5000
-   setInterval(function(){
-       // 마지막 이미지에서 처음으로
-    //    이미지개수가 6개면 0,1,2,3,4,5 여서 5가맨끝
-       if(img_num > 5) { img_num = 0; }
+  // 해당 이미지만 표시
+  $('.img img')
+    .eq(num - 1)
+    .css('display', 'block');
 
-       change_slider(img_num);
-       img_num++; // 다음 이미지       
-   }, 4000);
+  // 하단 페이저 탭 업데이트
+  $('#visual_pager > a').removeClass('selected');
+  $('#visual_pager > a').eq(num - 1).addClass('selected');
+}
 
-   
-   // 달력
+$(function () {
 
-   $(function () {
+  // 비주얼 자동재생
+  var visual_count = 1; // 이미지 카운터
+
+  setInterval(function () {
+    // 이미지 변경(1,2,3)
+    if (visual_count > 3) { visual_count = 1; }
+    visual_change(visual_count);
+    visual_count++;  // 다음 이미지로
+  }, 4000);
+
+
+  // 비주얼 버튼 클릭
+  $('#visual_pager > a').click(function () {
+    // 클래스 제거(상태 초기화)
+    $('#visual_pager > a').removeClass('selected');
+
+    // 클래스 추가
+    $(this).addClass('selected');
+
+    //a 태그 하이퍼링크 기본 이벤트 해제 (pager 눌러도 위로 안올라가게함)
+    return false;
+
+  });
+
+
+  // 달력
+
+  $(function () {
     // 실행 및 옵션
     $('.mydate').datePicker({
       format: 'YY-MM-DD HH:mm:ss',
@@ -40,20 +58,20 @@ $(function(){
 
 
 
-   // 예약
-   $('#book .people dl dd').click(function(){
+  // 예약
+  $('#book .people dl dd').click(function () {
     $('#popup_menu').toggle();
-});
+  });
 
   // 팝업창 닫기 버튼 
-  $('#btn_close').click(function(){
-      $('#popup_menu').toggle();
+  $('#btn_close').click(function () {
+    $('#popup_menu').toggle();
   });
 
   // 숫자버튼
   // var count = 1;
   // $('#popup_menu ul > button').on('click', function(){
-    
+
   //               $('#popup_menu ul li').html(count);
   //               count++;
   //           });
