@@ -448,6 +448,7 @@ color: #fff;
 }
 #offer > ul >  li:hover .info { 
     display: block;
+    /* outline: 1px solid red; */
 }
 #offer > ul > li:hover .info p {
     position: relative;
